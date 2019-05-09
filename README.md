@@ -6,4 +6,9 @@ This analyzer is revival of [Witches Den](https://github.com/ryanechternacht/wit
  TODO
 
 # Setup
- TODO
+ Just run:
+
+ ```
+npm install
+npm start
+ ```
