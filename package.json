@@ -34,7 +34,7 @@
     "webpack": "^4.30.0"
   },
   "scripts": {
-    "start": "node express/server.js",
+    "start": "node express/server.js"
   },
   "devDependencies": {
     "dotenv": "^2.0.0"
