@@ -1,3 +1,5 @@
+process.env.PWD = process.cwd()
+
 var express = require('express'),
     path = require('path'),
     morgan = require('morgan'),
@@ -13,15 +15,15 @@ if(!process.env.NODE_ENV) {
 
 app.use(morgan('dev'));
 
-var angularPath = path.join(__dirname + "/../app");
+var angularPath = path.join(env.PWD + "/../app");
 console.log("angular static path: " + angularPath);
 app.use(express.static(angularPath));
 
-var routesPath = path.join(__dirname, '/routes.js');
+var routesPath = path.join(env.PWD, '/routes.js');
 console.log("routes path: " + routesPath);
 require(routesPath)(app, angularPath, env);
 
-var faviconPath = path.join(__dirname, "favicon.png");
+var faviconPath = path.join(env.PWD, "favicon.png");
 console.log("favicon path: " + faviconPath);
 app.use(favicon(faviconPath));
 
