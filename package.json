@@ -40,7 +40,8 @@
   },
   "scripts": {
     "start": "node express/server.js",
-    "bundle": "webpack"
+    "bundle": "webpack",
+    "heroku-postbuild": "webpack -p"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
