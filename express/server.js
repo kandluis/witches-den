@@ -8,7 +8,7 @@ var express = require('express'),
 
 var env;
 if(!process.env.NODE_ENV) {
-    env = require('dotenv').load();
+    env = require('dotenv').config();
 } else {
     env = process.env;
 }
