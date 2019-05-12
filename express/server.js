@@ -15,7 +15,7 @@ if(!process.env.NODE_ENV) {
 
 app.use(morgan('dev'));
 
-var angularPath = path.join(env.PWD + "/../app");
+var angularPath = path.join(__dirname + "/../app");
 console.log("angular static path: " + angularPath);
 app.use(express.static(angularPath));
 
